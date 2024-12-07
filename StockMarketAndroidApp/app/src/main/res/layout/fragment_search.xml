@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment">
+
+    <Button
+        android:id="@+id/id_searchButton"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:background="#7DF381"
+        android:text="Search"
+        app:layout_constraintBottom_toTopOf="@+id/id_currentPricePerShare"
+        app:layout_constraintEnd_toEndOf="@+id/id_fragmentOne_plainText"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/id_fragmentOne_plainText"
+        app:layout_constraintTop_toBottomOf="@+id/id_fragmentOne_plainText"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/id_currentPricePerShare"
+        android:layout_width="211dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="84dp"
+        android:text="Current Price Per Share:"
+        app:layout_constraintEnd_toEndOf="@+id/id_searchButton"
+        app:layout_constraintStart_toStartOf="@+id/id_searchButton"
+        app:layout_constraintTop_toBottomOf="@+id/id_fragmentOne_plainText" />
+
+    <EditText
+        android:id="@+id/id_fragmentOne_plainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Company Symbol"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/id_sharesOwned"
+        android:layout_width="210dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Shares Owned:"
+        app:layout_constraintEnd_toEndOf="@+id/id_currentPricePerShare"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/id_currentPricePerShare"
+        app:layout_constraintTop_toBottomOf="@+id/id_currentPricePerShare" />
+
+    <TextView
+        android:id="@+id/id_marketValue"
+        android:layout_width="213dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Market Value:"
+        app:layout_constraintEnd_toEndOf="@+id/id_sharesOwned"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_sharesOwned"
+        app:layout_constraintTop_toBottomOf="@+id/id_sharesOwned" />
+
+    <Button
+        android:id="@+id/id_buyShareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:background="#7DF381"
+        android:text="Buy"
+        app:layout_constraintStart_toStartOf="@+id/id_marketValue"
+        app:layout_constraintTop_toBottomOf="@+id/id_marketValue" />
+
+    <Button
+        android:id="@+id/id_sellShareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:background="#7DF381"
+        android:text="Sell"
+        app:layout_constraintEnd_toEndOf="@+id/id_marketValue"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toEndOf="@+id/id_buyShareButton"
+        app:layout_constraintTop_toBottomOf="@+id/id_marketValue" />
+
+    <TextView
+        android:id="@+id/id_companyName"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_fragmentOne_plainText"
+        app:layout_constraintEnd_toEndOf="@+id/id_fragmentOne_plainText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_fragmentOne_plainText" />
+
+    <EditText
+        android:id="@+id/id_buyQuantity"
+        android:layout_width="86dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Enter Quantity "
+        android:inputType="textPersonName"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_buyShareButton"
+        app:layout_constraintEnd_toEndOf="@+id/id_buyShareButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/id_buyShareButton" />
+
+    <EditText
+        android:id="@+id/id_sellQuantity"
+        android:layout_width="86dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Enter Quantity "
+        android:inputType="textPersonName"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_sellShareButton"
+        app:layout_constraintEnd_toEndOf="@+id/id_sellShareButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/id_sellShareButton" />
+
+    <TextView
+        android:id="@+id/id_moneyLeft"
+        android:layout_width="192dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="4dp"
+        android:text="Buying Power:"
+        app:layout_constraintBottom_toTopOf="@+id/id_companyName"
+        app:layout_constraintEnd_toEndOf="@+id/id_companyName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_companyName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
